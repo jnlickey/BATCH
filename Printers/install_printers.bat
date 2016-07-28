@@ -1,10 +1,10 @@
-REM # rundll32 prinCOMPANY_NAMEi.dll,PrinCOMPANY_NAMEIEntry /if /b "lp217 (Ricoh Aficio SP 4310N)" /f "V:\Ricoh_Printer_Install_Lp217\Ricoh_Drivers\z53560Lf\disk1\OEMSECOMPANY_NAMEP.INF" /r "\\spooler.example.com\lp217" /m "RICOH Aficio SP 4310N PCL 6"
+REM # rundll32 printui.dll,PrintUIEntry /if /b "lp217 (Ricoh Aficio SP 4310N)" /f "V:\Ricoh_Printer_Install_Lp217\Ricoh_Drivers\z53560Lf\disk1\OEMSECOMPANY_NAMEP.INF" /r "\\spooler.example.com\lp217" /m "RICOH Aficio SP 4310N PCL 6"
 REM #
 REM #
 net use v: \\windows_soft\win_installs /u:someuser password
 SET ROOM=%COMPUTERNAME:~3,3%
 
-REM # jump to :CASE_CSE217, :CASE_CSE103, etc.
+REM # jump to :CASE_217, :CASE_103, etc.
 2>NUL CALL :CASE_%ROOM%
 REM # if label doesn't exist
 IF ERRORLEVEL 1 CALL :DEFAULT_CASE
